@@ -43,8 +43,16 @@
 </div>
 
 <script>
+function getScrollPosition() {
+    return Math.max(
+        window.pageYOffset,                // Стандартное свойство
+        document.body.scrollTop,           // Тело документа
+        document.documentElement.scrollTop // Корневой элемент (<html>)
+    );
+}
+
 document.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    var scrollPosition = getScrollPosition();
     if(scrollPosition > document.querySelector('#first-image').naturalHeight/4){
         document.getElementById("first-image").style.opacity = '1';
         document.getElementById("second-image").style.opacity = '1';
