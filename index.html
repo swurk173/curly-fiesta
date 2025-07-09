@@ -45,7 +45,7 @@
 <script>
 document.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY || document.documentElement.scrollTop;
-    if(scrollPosition > window.innerHeight){
+    if(scrollPosition > window.innerHeight/2){
         document.getElementById("first-image").style.opacity = '1';
         document.getElementById("second-image").style.opacity = '1';
     } else{
