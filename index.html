@@ -8,6 +8,7 @@
             height: 200vh; /* Сделаем страницу длиннее для скроллинга */
             margin: 0;
             overflow-x: hidden;
+			background-color: #FFC0CB;
         }
         
         .image-container {
@@ -29,12 +30,13 @@
             transition: opacity 1s ease-in-out;
         }
         
-        #second-image { position: absolute;
-		top: calc(100% + 20px);
+        #second-image { 
+		position: absolute;
+		top: calc(196%);
 		/* Появляется сразу под первой картинкой */ left: 50%;
 		transform: translateX(-50%); 
 		opacity: 0;
-		transition: opacity 1s ease-in-out; 
+		transition: opacity 3s ease-in-out; 
 		}
     </style>
 </head>
@@ -48,8 +50,8 @@
 <script>
 document.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY || document.documentElement.scrollTop;
-    if(scrollPosition > window.innerHeight / 2){
-        document.getElementById("first-image").style.opacity = '0';
+    if(scrollPosition > window.innerHeight){
+        document.getElementById("first-image").style.opacity = '1';
         document.getElementById("second-image").style.opacity = '1';
     } else{
         document.getElementById("first-image").style.opacity = '1';
