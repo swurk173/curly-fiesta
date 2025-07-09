@@ -53,7 +53,7 @@ function getScrollPosition() {
 
 document.addEventListener('scroll', function() {
     var scrollPosition = getScrollPosition();
-    if(scrollPosition > document.querySelector('#first-image').naturalHeight/4){
+    if(scrollPosition > document.querySelector('#first-image').naturalHeight/2){
         document.getElementById("first-image").style.opacity = '1';
         document.getElementById("second-image").style.opacity = '1';
     } else{
