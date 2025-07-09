@@ -29,14 +29,13 @@
             transition: opacity 1s ease-in-out;
         }
         
-        #second-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0; /* Растягиваем вторую картинку на всю ширину родителя */
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
+        #second-image { position: absolute;
+		top: calc(100% + 20px);
+		/* Появляется сразу под первой картинкой */ left: 50%;
+		transform: translateX(-50%); 
+		opacity: 0;
+		transition: opacity 1s ease-in-out; 
+		}
     </style>
 </head>
 <body>
