@@ -1,7 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Переход между изображениями</title>
+    <style> body { height: 200vh; /* Это сделает страницу достаточно длинной для скролла */ margin: 0; overflow-x: hidden; } .image-container { position: relative; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; } img { max-width: 100%; height: auto; } #first-image { opacity: 1; transition: opacity 1s ease-in-out; } #second-image { position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 1s ease-in-out; } </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    
+<div class="image-container">
+    <img id="first-image" src="https://via.placeholder.com/800x600.png?text=Первая+картинка" alt="Первая картинка">
+    <img id="second-image" src="https://via.placeholder.com/800x600.png?text=Вторая+картинка" alt="Вторая картинка">
+</div>
+
+<script> document.addEventListener('scroll', function() { var scrollPosition = window.scrollY || document.documentElement.scrollTop; if(scrollPosition > window.innerHeight / 2){ document.getElementById("first-image").style.opacity = '0'; document.getElementById("second-image").style.opacity = '1'; } else{ document.getElementById("first-image").style.opacity = '1'; document.getElementById("second-image").style.opacity = '0'; } }); </script>
+
 </body>
 </html>
