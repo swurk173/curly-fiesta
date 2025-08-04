@@ -30,27 +30,27 @@
         }
         
         #2-image {
-            opacity: 0;
+            opacity: 1;
             transition: opacity 2s ease-in-out;
         }
 		
 		#3-image {
-            opacity: 0;
+            opacity: 1;
             transition: opacity 2s ease-in-out;
         }
 		
 		#4-image {
-            opacity: 0;
+            opacity: 1;
             transition: opacity 2s ease-in-out;
         }
 		
 		#5-image {
-            opacity: 0;
+            opacity: 1;
             transition: opacity 2s ease-in-out;
         }
 		
 		#6-image {
-            opacity: 0;
+            opacity: 1;
             transition: opacity 2s ease-in-out;
         }
     </style>
@@ -75,16 +75,6 @@ function getScrollPosition() {
     );
 }
 
-document.addEventListener('scroll', function() {
-    var scrollPosition = getScrollPosition();
-    if(scrollPosition > document.querySelector('#1-image').naturalHeight/8){
-        document.getElementById("1-image").style.opacity = '1';
-        document.getElementById("2-image").style.opacity = '1';
-    } else{
-        document.getElementById("1-image").style.opacity = '1';
-        document.getElementById("2-image").style.opacity = '0';
-    }
-});
 </script>
 
 </body>
