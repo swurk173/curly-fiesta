@@ -9,7 +9,7 @@
             height: auto; /* Создаем пространство для скроллинга */
             margin: 0;
             overflow-x: hidden;
-            background-color: #F8F8FF;
+            background-color: #FFC0CB;
         }
         
         .image-container {
@@ -24,33 +24,13 @@
             margin: 0 auto; /* Горизонтальное центрирование */
         }
         
-        #1-image {
+        #first-image {
             opacity: 1;
             transition: opacity 1s ease-in-out;
         }
         
-        #2-image {
-            opacity: 1;
-            transition: opacity 2s ease-in-out;
-        }
-		
-		#3-image {
-            opacity: 1;
-            transition: opacity 2s ease-in-out;
-        }
-		
-		#4-image {
-            opacity: 1;
-            transition: opacity 2s ease-in-out;
-        }
-		
-		#5-image {
-            opacity: 1;
-            transition: opacity 2s ease-in-out;
-        }
-		
-		#6-image {
-            opacity: 1;
+        #second-image {
+            opacity: 0;
             transition: opacity 2s ease-in-out;
         }
     </style>
@@ -58,12 +38,8 @@
 <body>
 
 <div class="image-container">
-    <img id="1-image" src="https://swurk173.github.io/curly-fiesta/page-1.png" alt="Первая картинка">
-    <img id="2-image" src="https://swurk173.github.io/curly-fiesta/page-2.png" alt="Вторая картинка">
-	<img id="3-image" src="https://swurk173.github.io/curly-fiesta/page-3.png" alt="Третья картинка">
-    <img id="4-image" src="https://swurk173.github.io/curly-fiesta/page-4.png" alt="Четвертая картинка">
-	<img id="5-image" src="https://swurk173.github.io/curly-fiesta/page-5.png" alt="Пятая картинка">
-    <img id="6-image" src="https://swurk173.github.io/curly-fiesta/page-6.png" alt="Шестая картинка">
+    <img id="first-image" src="https://swurk173.github.io/curly-fiesta/photo_1.PNG" alt="Первая картинка">
+    <img id="second-image" src="https://swurk173.github.io/curly-fiesta/photo_2.PNG" alt="Вторая картинка">
 </div>
 
 <script>
@@ -75,6 +51,16 @@ function getScrollPosition() {
     );
 }
 
+document.addEventListener('scroll', function() {
+    var scrollPosition = getScrollPosition();
+    if(scrollPosition > document.querySelector('#first-image').naturalHeight/8){
+        document.getElementById("first-image").style.opacity = '1';
+        document.getElementById("second-image").style.opacity = '1';
+    } else{
+        document.getElementById("first-image").style.opacity = '1';
+        document.getElementById("second-image").style.opacity = '0';
+    }
+});
 </script>
 
 </body>
