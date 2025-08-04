@@ -24,12 +24,32 @@
             margin: 0 auto; /* Горизонтальное центрирование */
         }
         
-        #first-image {
+        #1-image {
             opacity: 1;
             transition: opacity 1s ease-in-out;
         }
         
-        #second-image {
+        #2-image {
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+		
+		#3-image {
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+		
+		#4-image {
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+		
+		#5-image {
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+		
+		#6-image {
             opacity: 0;
             transition: opacity 2s ease-in-out;
         }
@@ -38,12 +58,12 @@
 <body>
 
 <div class="image-container">
-    <img id="first-image" src="https://swurk173.github.io/curly-fiesta/page-1.PNG" alt="Первая картинка">
-    <img id="second-image" src="https://swurk173.github.io/curly-fiesta/page-2.PNG" alt="Вторая картинка">
-	<img id="first-image" src="https://swurk173.github.io/curly-fiesta/page-3.PNG" alt="Первая картинка">
-    <img id="second-image" src="https://swurk173.github.io/curly-fiesta/page-4.PNG" alt="Вторая картинка">
-	<img id="first-image" src="https://swurk173.github.io/curly-fiesta/page-5.PNG" alt="Первая картинка">
-    <img id="second-image" src="https://swurk173.github.io/curly-fiesta/page-6.PNG" alt="Вторая картинка">
+    <img id="1-image" src="https://swurk173.github.io/curly-fiesta/page-1.PNG" alt="Первая картинка">
+    <img id="2-image" src="https://swurk173.github.io/curly-fiesta/page-2.PNG" alt="Вторая картинка">
+	<img id="3-image" src="https://swurk173.github.io/curly-fiesta/page-3.PNG" alt="Третья картинка">
+    <img id="4-image" src="https://swurk173.github.io/curly-fiesta/page-4.PNG" alt="Четвертая картинка">
+	<img id="5-image" src="https://swurk173.github.io/curly-fiesta/page-5.PNG" alt="Пятая картинка">
+    <img id="6-image" src="https://swurk173.github.io/curly-fiesta/page-6.PNG" alt="Шестая картинка">
 </div>
 
 <script>
@@ -57,12 +77,12 @@ function getScrollPosition() {
 
 document.addEventListener('scroll', function() {
     var scrollPosition = getScrollPosition();
-    if(scrollPosition > document.querySelector('#first-image').naturalHeight/8){
-        document.getElementById("first-image").style.opacity = '1';
-        document.getElementById("second-image").style.opacity = '1';
+    if(scrollPosition > document.querySelector('#1-image').naturalHeight/8){
+        document.getElementById("1-image").style.opacity = '1';
+        document.getElementById("2-image").style.opacity = '1';
     } else{
-        document.getElementById("first-image").style.opacity = '1';
-        document.getElementById("second-image").style.opacity = '0';
+        document.getElementById("1-image").style.opacity = '1';
+        document.getElementById("2-image").style.opacity = '0';
     }
 });
 </script>
